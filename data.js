@@ -401,7 +401,7 @@ const PORTAL_DEFAULT_DATA = {
           "id": "aguap-1",
           "name": "Validación de Datos",
           "type": "excel",
-          "url": "https://grupodieckhn-my.sharepoint.com/:x:/r/personal/supervisorbd_grupodieck_hn/_layouts/15/Doc.aspx?sourcedoc=%7B6C2F8F60-6D23-4AA4-9DFC-0734AABC78E2%7D&file=MONITOREO%20DE%20AGUA%20DE%20PROCESO.xlsx&action=edit&mobileredirect=true&wdMsFormsCorrelationId=74488ff7-7ca4-4349-a749-d252df7cb4bb&wdtf=%20Microsoft.Office.Excel.FMsFormsMetadataInWorkbookMetadata%3Atrue",
+          "url": "https://grupodieckhn-my.sharepoint.com/:x:/g/personal/supervisorbd_grupodieck_hn/IQBgjy9sI22kSp38BzSqvHjiATO5aMWFsm_GlptQ8j4Ev3o?e=LY40S3",
           "note": "Datos de proceso"
         },
         {
@@ -422,7 +422,7 @@ const PORTAL_DEFAULT_DATA = {
           "id": "prod-1",
           "name": "Validación de Datos",
           "type": "excel",
-          "url": "https://grupodieckhn-my.sharepoint.com/:x:/r/personal/supervisorbd_grupodieck_hn/_layouts/15/Doc.aspx?sourcedoc=%7BF703A76F-1E32-4109-BAD4-D524D724A61E%7D&file=Registro%20Producto%20en%20%20%20Proceso%204.xlsx&action=edit&mobileredirect=true&wdMsFormsCorrelationId=af28cbca-4001-4c68-9c22-adf4d5f6454a&wdtf=%20Microsoft.Office.Excel.FMsFormsMetadataInWorkbookMetadata%3Atrue",
+          "url": "https://grupodieckhn-my.sharepoint.com/:x:/g/personal/supervisorbd_grupodieck_hn/IQBvpwP3Mh4JQbrU1STXJKYeASvS8h4eKjk-F9BTMeQ0j9M?e=jdqbR9",
           "note": "Datos de proceso"
         },
         {
