@@ -45,22 +45,12 @@
     return safeText(value).toLowerCase();
   }
 
-  function shouldOpenInSameTab(url) {
-    return (
-      /^https?:\/\/grupodieckhn/i.test(url) ||
-      /^https?:\/\/grupodieckhn\.sharepoint\.com/i.test(url) ||
-      /^https?:\/\/forms\./i.test(url) ||
-      /^https?:\/\/.*monday\.com/i.test(url) ||
-      /^https?:\/\/supervisorbd\.github\.io/i.test(url) ||
-      /^https?:\/\/192\.168\./i.test(url)
-    );
-  }
-
-  function openNativeUrl(url, sameTab = false) {
+  function openNativeUrl(url) {
     const safe = encodeURI(String(url || '').trim());
+    if (!safe) return;
     const a = document.createElement('a');
     a.href = safe;
-    a.target = sameTab ? '_self' : '_blank';
+    a.target = '_blank';
     a.rel = 'noopener noreferrer';
     document.body.appendChild(a);
     a.click();
@@ -547,13 +537,13 @@
       frame.contentWindow.focus();
       frame.contentWindow.print();
     } catch {
-      openNativeUrl(state.viewer.url, false);
+      openNativeUrl(state.viewer.url);
     }
   }
 
   function openViewerExternal() {
     if (!state.viewer.url) return;
-    openNativeUrl(state.viewer.url, false);
+    openNativeUrl(state.viewer.url);
   }
 
   function openItem(itemId) {
@@ -570,11 +560,7 @@
       openViewer(itemId);
       return;
     }
-    if (shouldOpenInSameTab(url)) {
-      openNativeUrl(url, true);
-      return;
-    }
-    openNativeUrl(url, false);
+    openNativeUrl(url);
   }
 
   function toggleFavorite(itemId) {
@@ -1021,7 +1007,6 @@
     if (viewerPrintBtn) viewerPrintBtn.addEventListener('click', printViewer);
     const viewerOpenBtn = el('viewerOpenBtn');
     if (viewerOpenBtn) viewerOpenBtn.addEventListener('click', openViewerExternal);
-
   }
 
   function wireItemActionDelegation() {
@@ -1216,12 +1201,12 @@
     );
   }
 
-  function openResourceUrl(url, sameTab = false) {
+  function openResourceUrl(url) {
     const safe = encodeURI(String(url || '').trim());
     if (!safe) return;
     const a = document.createElement('a');
     a.href = safe;
-    a.target = sameTab ? '_self' : '_blank';
+    a.target = '_blank';
     a.rel = 'noopener noreferrer';
     document.body.appendChild(a);
     a.click();
@@ -1257,13 +1242,13 @@
       frame.contentWindow.focus();
       frame.contentWindow.print();
     } catch {
-      openResourceUrl(state.viewer.url, false);
+      openResourceUrl(state.viewer.url);
     }
   }
 
   function openViewerExternal() {
     if (!state.viewer.url) return;
-    openResourceUrl(state.viewer.url, false);
+    openResourceUrl(state.viewer.url);
   }
 
   function setLoginState(userLike) {
@@ -1649,11 +1634,7 @@
       openPdfViewer(url, found.item.name || 'Vista previa', found.item.note || 'PDF listo para imprimir.');
       return;
     }
-    if (resolveOpenMode(url)) {
-      openResourceUrl(url, true);
-      return;
-    }
-    openResourceUrl(url, false);
+    openResourceUrl(url);
   }
 
   function toggleFavorite(itemId) {
@@ -2045,7 +2026,6 @@
     if (!last) return;
     const user = findUser(last);
     if (user) {
-      // leave on login screen; the user can tap Enter or use the username to re-enter.
       el('loginName').value = user.username;
     }
   }
