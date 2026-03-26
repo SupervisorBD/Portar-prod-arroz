@@ -372,9 +372,9 @@ const PORTAL_DEFAULT_DATA = {
       ]
     },
     {
-      "id": "tarimas",
-      "name": "Monitoreo de Tarimas",
-      "description": "Control y captura de tarimas.",
+      "id": "Hyster",
+      "name": "Formatos de Hysteros",
+      "description": "Control y captura de pdf.",
       "items": [
         {
           "id": "tar-1",
@@ -436,14 +436,14 @@ const PORTAL_DEFAULT_DATA = {
     },
     {
       "id": "tarimas-planta",
-      "name": "Monitoreo de Tarimas en Planta",
+      "name": "Monitoreo díario de Tarimas en Planta",
       "description": "Control de tarimas en planta y su formulario.",
       "items": [
         {
           "id": "tarp-1",
           "name": "Validación de Datos",
           "type": "excel",
-          "url": "https://grupodieckhn-my.sharepoint.com/:x:/r/personal/ariel_clavasquin_grupodieck_hn/_layouts/15/Doc.aspx?sourcedoc=%7B62E164CF-72FF-44D9-9366-D44061144A92%7D&file=CONTROL%20DE%20TARIMAS%20EN%20PLANTA..xlsx&fromShare=true&action=default&mobileredirect=true",
+          "url": "https://grupodieckhn-my.sharepoint.com/:x:/g/personal/ariel_clavasquin_grupodieck_hn/IQDPZOFi_3LZRJNm1EBhFEqSAUiGfOlQk8zWnDes4VK2LmY?e=Igq1Up",
           "note": "Control de tarimas"
         },
         {
