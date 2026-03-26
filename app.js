@@ -1060,7 +1060,7 @@
 
   const DEFAULT_USERS = [
     { id: 'usr-admin', username: 'admin', fullName: 'Administrador General', role: 'admin', active: true },
-    { id: 'usr-admin', username: 'ariel', fullName: 'Ariel Clavasquin', role: 'admin', active: true },
+    { id: 'usr-ariel', username: 'ariel', fullName: 'Ariel Clavasquin', role: 'admin', active: true },
     { id: 'usr-supervisor', username: 'supervisor', fullName: 'Supervisor General', role: 'editor', active: true },
     { id: 'usr-demo', username: 'demo', fullName: 'Usuario autorizado', role: 'editor', active: true },
     { id: 'usr-visor', username: 'visor', fullName: 'Usuario de Consulta', role: 'viewer', active: true }
